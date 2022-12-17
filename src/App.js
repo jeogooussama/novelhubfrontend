@@ -19,9 +19,6 @@ function App() {
   <Route  path="/novel/:novelId/chapter/:chapterId" element={<Read/>} />
   <Route path="/privacy" element={<Privacy/>} />
   <Route path="/terms" element={<Terms/>} />
-
-  
-
 </Routes>
 </BrowserRouter>
     )
