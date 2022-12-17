@@ -32,9 +32,12 @@
 }
 .NImg {
   border-radius: 10px;
+  font-family: 'Marhey', cursive;
+
 }
 .NCItems {
   display: flex;
+  font-family: 'Marhey', cursive;
   gap: 20px;
 }
 .novelDesc {

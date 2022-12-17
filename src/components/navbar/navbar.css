@@ -2,10 +2,11 @@
   height: 50px;
   background-color: #4f86f7;
   display: flex;
-  font-family: "Marhey", cursive;
+  font-family: 'Marhey', cursive;
   justify-content: center;
 }
 .navContainer {
+  font-family: 'Marhey', cursive;
   width: 100%;
   color: white;
   max-width: 1024px;

@@ -1,28 +1,28 @@
 .footer {
   background-color: #4f86f7 ;
   width: 100%;
-  display: flex;
   margin-top: 0.3em;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  height: 90px;
+  height: inherit;
 }
 .privecy-terms {
   width: 100%;
   color: white;
-max-width: 1024px;
   padding: 15px;
-
-
+  display: flex;
+  justify-content: center;
 }
 .privecy-terms>a{
   gap: 10px;
   margin: 10px;
   padding: 5px;
-  float: right;
+
 }
 .copyright{
-  position: absolute;
+  display: flex;
+ justify-content: center;
+  width: 100%;
 }
 @media only screen and (max-width: 600px) {
   .footer {
