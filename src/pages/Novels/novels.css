@@ -1,0 +1,29 @@
+.novals {
+  padding-top: 1.3em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Marhey", cursive;
+} 
+.novalsContainer {
+  width: 100%;
+  max-width: 1024px;
+}
+.novelsCitmes {
+  text-align: center;
+}
+
+.novalBox {
+  margin: 10px;
+  display: inline;
+  float: left;
+  padding: 15px;
+  border: 0.1mm solid white;
+  border-radius: 7px;
+  background-color: #69a6d1;
+}
+.img {
+  width: 120px;
+  height: 150px;
+  border-radius: 7px;
+}

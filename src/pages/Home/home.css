@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Marhey', cursive;
+
+}
+.homeContainer{
+color:white;
+    width: 100%;
+    align-items: center;
+    font-family: 'Marhey', cursive;
+    background-color: black;
+/* background-color: #360536; */
+/* background-color: #7785AC; */
+
+
+}

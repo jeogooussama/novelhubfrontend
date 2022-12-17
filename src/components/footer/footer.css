@@ -1,0 +1,27 @@
+.footer {
+  background-color: #4f86f7 ;
+  width: 100%;
+  display: flex;
+  margin-top: 0.3em;
+}
+.footerContainer {
+  width: 100%;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.footerContactUs,
+.copyright {
+  max-width: max-content;
+  display: flex;
+  gap: 15px;
+  margin: auto;
+  padding: auto;
+}
+.copyright {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-top: 25px;
+}

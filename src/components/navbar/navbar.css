@@ -1,0 +1,31 @@
+.navbar {
+  height: 50px;
+  background-color: #4f86f7;
+  display: flex;
+  font-family: "Marhey", cursive;
+  justify-content: center;
+}
+.navContainer {
+  width: 100%;
+  color: white;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.navButton {
+  font-family: "Marhey", cursive;
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.logo {
+  font-weight: bold;
+}
+/* resposive for phones */
+@media only screen and (max-width: 600px) {
+
+
+  }

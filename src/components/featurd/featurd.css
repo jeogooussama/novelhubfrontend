@@ -1,0 +1,79 @@
+.fuatrud {
+  color: white;
+}
+
+.feutredContainer {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  color: white;
+
+  height: 1500px;
+  /*   */
+}
+
+.FeatrudContainer {
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.FeaturdItems {
+  max-width: 1200px;
+  margin-left: 3%;
+  margin-top: 2%;
+  text-align: center;
+  color: white;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: rgb(255, 255, 255) 0px 1px 3px, rgb(255, 255, 255) 0px 1px 2px;
+}
+.Tags {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  height: min-content;
+}
+
+.featrudBox {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: rgb(255, 255, 255) 0px 1px 3px, rgb(255, 255, 255) 0px 1px 2px;
+  background-color: #000000;
+  color: white;
+}
+
+.nImg {
+  width: 100px;
+  height: 120px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.TagMor {
+  font-size: 20px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+.tag {
+  color: white;
+}
+/* resposive for phones */
+@media only screen and (max-width: 600px) {
+  .FeaturdItems {
+    overflow: auto;
+    margin: 0;
+    padding: 10px;
+    max-width: auto;
+  }
+  .featrudBox {
+    display: inline;
+    align-items: center;
+  }
+}
