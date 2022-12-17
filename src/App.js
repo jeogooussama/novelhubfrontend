@@ -5,8 +5,8 @@ import { BrowserRouter,Route, Routes  } from "react-router-dom";
 import Novel from "./pages/Novel/Novel";
 import Read from "./pages/read/Read";
 import Novels from "./pages/Novels/Novels";
-import Privacy from "./pages/Privacy Policy/Privacy&Policy"
-import Terms from "./pages/Terms/Terms"
+import Privacy from "./components/PrivacyPolicy/Privacy&Policy"
+import Terms from "./components/Terms/Terms"
 
 function App() {
 
