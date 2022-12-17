@@ -7,6 +7,7 @@ import {
   faMessage,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="Header">
@@ -14,17 +15,17 @@ const Header = () => {
         <div className="HeaderListItems">
           {/* HOME */}
           <div className="HeaderListItem">
-            <a href="/">
+            <Link to="/">
             <FontAwesomeIcon icon={faHouse} />
               <span>Home</span>
-            </a>
+            </Link>
           </div>
           {/* NOVALS */}
           <div className="HeaderListItem">
-            <a href="/novels">
+            <Link to="/novels">
             <FontAwesomeIcon icon={faBook} />
               <span>Novels</span>
-            </a>
+            </Link>
           </div>
           {/* CONTUCT US */}
           <div className="HeaderListItem">
