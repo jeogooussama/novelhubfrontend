@@ -3,25 +3,30 @@
   width: 100%;
   display: flex;
   margin-top: 0.3em;
-}
-.footerContainer {
-  width: 100%;
-  color: white;
   align-items: center;
   justify-content: center;
+  height: 90px;
+}
+.privecy-terms {
+  width: 100%;
+  color: white;
+max-width: 1024px;
   padding: 15px;
+
+
+}
+.privecy-terms>a{
+  gap: 10px;
+  margin: 10px;
+  padding: 5px;
+  float: right;
+}
+.copyright{
+  position: absolute;
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+display: block;
+  }
 }
 
-.footerContactUs,
-.copyright {
-  max-width: max-content;
-  display: flex;
-  gap: 15px;
-  margin: auto;
-  padding: auto;
-}
-.copyright {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  margin-top: 25px;
-}

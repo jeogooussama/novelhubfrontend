@@ -5,6 +5,8 @@ import { BrowserRouter,Route, Routes  } from "react-router-dom";
 import Novel from "./pages/Novel/Novel";
 import Read from "./pages/read/Read";
 import Novels from "./pages/Novels/Novels";
+import Privacy from "./pages/Privacy Policy/Privacy&Policy"
+import Terms from "./pages/Terms/Terms"
 
 function App() {
 
@@ -15,6 +17,11 @@ function App() {
   <Route path="/novel/:novelId" element={<Novel/>} />
   <Route path="/novels" element={<Novels/>}/>
   <Route  path="/novel/:novelId/chapter/:chapterId" element={<Read/>} />
+  <Route path="/privacy" element={<Privacy/>} />
+  <Route path="/terms" element={<Terms/>} />
+
+  
+
 </Routes>
 </BrowserRouter>
     )
