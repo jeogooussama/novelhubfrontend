@@ -5,8 +5,8 @@ function Footer() {
     <div>
       <div className="footer">
         <div className="privecy-terms">
-        <a href="/privacy">privacy</a>
-        <a href="/terms">terms</a>
+        <a href="/privacy/">privacy</a>
+        <a href="/terms/">terms</a>
         </div>
         <div className="copyright">
           @all copyright save by jeogo
