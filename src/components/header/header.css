@@ -4,12 +4,14 @@
   justify-content: center;
   position: relative;
   height: 80px;
+  font-family: 'Marhey', cursive;
 }
 .HeaderItems {
   width: 100%;
   max-width: 1024px;
   display: flex;
   justify-content: space-between;
+  font-family: 'Marhey', cursive;
 }
 a{
   text-decoration: none;

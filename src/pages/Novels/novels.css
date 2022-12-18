@@ -3,11 +3,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: "Marhey", cursive;
+  font-family: 'Marhey', cursive;
 } 
 .novalsContainer {
   width: 100%;
   max-width: 1024px;
+  font-family: 'Marhey', cursive;
+
 }
 .novelsCitmes {
   text-align: center;
