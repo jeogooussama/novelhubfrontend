@@ -36,7 +36,6 @@ function Featurd() {
 
                     <div className="FeaturdBoxInfo" key={data.id}>
                       <h3 className="title">{data.title} </h3>
-                      <span className="chpaters">{data.chapter.length}</span>
                     </div>
                   </div>
                 ))}
@@ -61,7 +60,6 @@ function Featurd() {
                     </StyledLink>
                     <div className="FeaturdBoxInfo">
                       <h3 className="title">{data.title} </h3>
-                      <span className="chpaters">{data.chapter.length}</span>
                     </div>
                   </div>
                 ))}
@@ -92,7 +90,7 @@ function Featurd() {
                       </StyledLink>
                       <div className="FeaturdBoxInfo">
                         <h3 className="title">{data.title} </h3>
-                        <span className="chpaters">{data.chapter.length}</span>
+                        
                       </div>
                     </div>
                   ))}
@@ -119,7 +117,6 @@ function Featurd() {
 
                     <div className="FeaturdBoxInfo" key={data.id}>
                       <h3 className="title">{data.title} </h3>
-                      <span className="chpaters">{data.chapter.length}</span>
                     </div>
                   </div>
                 ))}
@@ -145,7 +142,6 @@ function Featurd() {
 
                     <div className="FeaturdBoxInfo" key={data.id}>
                       <h3 className="title">{data.title} </h3>
-                      <span className="chpaters">{data.chapter.length}</span>
                     </div>
                   </div>
                 ))}

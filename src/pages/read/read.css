@@ -1,8 +1,12 @@
+.containerText{
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
 .readerPage {
   width: 100%;
   display: flex;
-  background-color: #8ac9f5;
-
+  background-color: #FFC23C;
   font-family: "Marhey", cursive;
   align-items: center;
   justify-content: center;
@@ -11,10 +15,9 @@
 .navbarChapters {
   width: 100%;
   color: white;
-  max-width: 1024px;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Marhey', cursive;
+  font-family: "Marhey", cursive;
 }
 .titleNovel {
   width: 100%;
@@ -27,12 +30,11 @@
   display: flex;
   justify-content: space-between;
   margin-top: 25px;
+  width: 100%;
   padding: 10px;
-  border-bottom: 1mm solid white;
 }
 .buttons {
   display: flex;
-  margin-left: 29px;
 }
 .rightB,
 .leftB,
@@ -54,6 +56,8 @@
   color: black;
   background-color: rgb(255, 255, 255);
   padding: 10px;
+  margin-left: 25px;
+  margin-top: 10px;
   border: 0.4mm solid white;
 }
 .readAria {
@@ -66,10 +70,14 @@
   align-items: center;
 }
 .textContenet {
+  color: white;
   margin: 15px;
   display: flex;
   width: 100%;
+  height: 800px;
   max-width: 700px;
-  text-align: right;
-
+text-align: right;
+}
+.textContenet >p{
+  width: 100%;
 }

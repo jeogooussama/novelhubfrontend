@@ -22,14 +22,15 @@ function Novels() {
          data.map((data,index)=>(
           <Link to={`/novel/${data._id}`} >
                 <div className="novalBox" key={index}>
+                <div className="Novelinfo">
+                    <span>{data.title}</span>
+                  </div>
                   <img
                     srcSet={data.image}
                     alt=""
                     className="img"
                   />
-                  <div className="Novelinfo">
-                    <span>{data.title}</span>
-                  </div>
+                
                 </div>
                  </Link>
                  ))}

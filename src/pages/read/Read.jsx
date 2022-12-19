@@ -1,9 +1,4 @@
-import {
-  faArrowLeft,
-  faArrowRight,
-  faSun,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { useEffect } from "react";
 import {} from "react-router-dom";
 import { useHistory } from "react-router-use-history";
@@ -22,8 +17,7 @@ function Read() {
   const { singleChapter } = useFetchSc(
     `https://novelhub.adaptable.app/chapter/${novelId}/${chapterId}` //single chpater in novel
   );
-  // Remmeber create new hook for the read page <3 =>(done)
-  // create a function replace id of chapter ==> RES:response ='(res.data.chapter_id)'
+  // done
   //-----------------------------------------------
   /*
    
@@ -73,6 +67,23 @@ function Read() {
         <Navbar />
         <div className="readerPage">
           <div className="navbarChapters">
+            <div className="dropDownCh">
+              <select className="dropdownItem " onChange={handlechange}>
+                {singleChapter &&
+                  chapter &&
+                  chapter.map((chapter) => (
+                    <option
+                      value={chapter._id}
+                      key={chapter._id}
+                      defaultValue={singleChapter.map(
+                        (number) => number.numberChapter
+                      )}
+                    >
+                      {chapter.numberChapter}
+                    </option>
+                  ))}
+              </select>
+            </div>
             {singleChapter &&
               singleChapter.map((chaptertitle, index) => (
                 <div className="titleNovel" key={index}>
@@ -82,40 +93,22 @@ function Read() {
               ))}
 
             <div className="navItme">
-              <div className=".dropDownCh">
-                <select className="dropdownItem " onChange={handlechange}>
-                  {singleChapter &&
-                    chapter &&
-                    chapter.map((chapter) => (
-                      <option
-                        value={chapter._id}
-                        key={chapter._id}
-                        defaultValue={singleChapter.map(
-                          (number) => number.numberChapter
-                        )}
-                      >
-                        {chapter.numberChapter}
-                      </option>
-                    ))}
-                </select>
-              </div>
               <div className="buttons">
                 <button className="leftB" onClick={setBack}>
-                  <FontAwesomeIcon icon={faArrowLeft} />
-                </button>
-                {singleChapter.map((number) => (
-                  <div className="nuberChapter" key={number._id}>
-                    {" "}
-                    {number.numberChapter}
-                  </div>
-                ))}
-                <button className="rightB" onClick={setNext}>
-                  <FontAwesomeIcon icon={faArrowRight} />
+                  سابق
                 </button>
               </div>
-              <div className="lightDarkMode">
-                <button className="mode">
-                  <FontAwesomeIcon icon={faSun} />
+
+              {singleChapter.map((number) => (
+                <div className="nuberChapter" key={number._id}>
+                  {" "}
+                  {number.numberChapter}
+                </div>
+              ))}
+
+                <div className="buttons">
+                <button className="rightB" onClick={setNext}>
+                  التالي
                 </button>
               </div>
             </div>
@@ -125,7 +118,11 @@ function Read() {
         {singleChapter &&
           singleChapter.map((chapterText, index) => (
             <div className="readAria" key={index}>
-              <div className="textContenet">{chapterText.textContianer}</div>
+              <pre className="textContenet">
+             
+                <p>{chapterText.textContianer}</p>
+             
+              </pre>
             </div>
           ))}
       </div>
