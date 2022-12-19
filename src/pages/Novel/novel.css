@@ -7,8 +7,7 @@
   justify-content: center;
   width: 100%;
   font-family: 'Marhey', cursive;
-  padding: 10px;
-  position: relative;
+  padding: 1px;
   text-align: right;
 }
 .novelContainer {
@@ -45,9 +44,10 @@
 
 }
 .NCItems {
-  display: flex;
   font-family: 'Marhey', cursive;
   gap: 20px;
+
+
 }
 .novelDesc {
   max-width: 1024px;
@@ -62,14 +62,15 @@
 .story,
 .tags {
   color: black;
+
+}
+.image-airia{
+  display: flex;
+  height: min-content;
+
 }
 .tag-item {
-  display: inline-block;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  border-radius: 20px;
+  text-align: end;
 }
 .chapter {
   display: flex;
@@ -79,7 +80,6 @@
   align-content: center;
   justify-content: center;
   text-align: right;
-
 }
 .chapter > h3 {
   width: 100%;

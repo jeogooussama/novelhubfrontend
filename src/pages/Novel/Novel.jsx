@@ -20,11 +20,14 @@ function Novel() {
       <Header />
       <div className="novel">
         <div className="novelContainer">
+          
           {
+            
             <div className="NCItems">
               <div className="novelDesc">
+                <div className="tags"></div>
                 <div className="title">
-                 العنوان: <span>{data.title}</span>
+                  العنوان: <span>{data.title}</span>
                 </div>
                 <div className="translator">
                   {" "}
@@ -35,16 +38,15 @@ function Novel() {
                   {" "}
                   القصة: <span>{data.desc}</span>{" "}
                 </div>
-                <div className="tags">
-                  <span className="tag-item">التصنيف: {tags}</span>
-                </div>
+                <span className="tag-item"> {tags}</span>
               </div>
             </div>
           }
-<div>                  <img srcSet={data.image} width="170px" alt="" className="NImg" />
-</div>
+          <div className="image-airia">
+            {" "}
+            <img srcSet={data.image} width="170px" alt="" className="NImg" />
+          </div>
         </div>
-        
       </div>
       <div className="chapter">
         <div className="chapterContainer">
