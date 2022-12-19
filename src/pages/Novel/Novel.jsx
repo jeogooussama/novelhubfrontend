@@ -22,31 +22,33 @@ function Novel() {
         <div className="novelContainer">
           {
             <div className="NCItems">
-              <img srcSet={data.image} width="170px" alt="" className="NImg" />
               <div className="novelDesc">
                 <div className="title">
-                  title: <span>{data.title}</span>
+                 العنوان: <span>{data.title}</span>
                 </div>
                 <div className="translator">
                   {" "}
-                  translator: <span>OUSSAMA</span>{" "}
+                  المترجم:<span></span>{" "}
                 </div>
-                <div className="rating"> starts: {data.rating}</div>
+                <div className="rating">التقييم:{data.rating}</div>
                 <div className="story">
                   {" "}
-                  story: <span>{data.desc}</span>{" "}
+                  القصة: <span>{data.desc}</span>{" "}
                 </div>
                 <div className="tags">
-                  <span className="tag-item">tags: {tags}</span>
+                  <span className="tag-item">التصنيف: {tags}</span>
                 </div>
               </div>
             </div>
           }
+<div>                  <img srcSet={data.image} width="170px" alt="" className="NImg" />
+</div>
         </div>
+        
       </div>
       <div className="chapter">
         <div className="chapterContainer">
-          <h3>Chpaters</h3>
+          <h3>الفصول</h3>
           {chapter &&
             chapter.map((chapter, index) => (
               <ul key={index}>

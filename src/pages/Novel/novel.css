@@ -9,9 +9,11 @@
   font-family: 'Marhey', cursive;
   padding: 10px;
   position: relative;
+  text-align: right;
 }
 .novelContainer {
   display: flex;
+  justify-content: flex-end;
   width: 100%;
   max-width: 1024px;
   padding: 10px;
@@ -26,12 +28,19 @@
   max-width: 1024px;
   padding: 10px;
 }
+.chapterContainer>h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 .chapterContainer > ul > li > a {
   text-decoration: none;
   color: black;
 }
 .NImg {
   border-radius: 10px;
+  margin: 10px;
+
   font-family: 'Marhey', cursive;
 
 }
@@ -44,7 +53,7 @@
   max-width: 1024px;
   margin-top: 1em;
   gap: 10px;
-  color: white;
+  color: black;
 }
 .NCItems>
 .title,
@@ -69,6 +78,8 @@
   width: 100%;
   align-content: center;
   justify-content: center;
+  text-align: right;
+
 }
 .chapter > h3 {
   width: 100%;
@@ -87,6 +98,7 @@
 }
 .chapterContainer > ul > li {
   border-bottom: 0.5mm solid black;
+
 }
 
 @media only screen and (max-width: 600px) {

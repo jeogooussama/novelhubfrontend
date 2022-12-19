@@ -17,20 +17,20 @@ const Header = () => {
           <div className="HeaderListItem">
             <Link to="/">
             <FontAwesomeIcon icon={faHouse} />
-              <span>Home</span>
+              <span>الرئيسية</span>
             </Link>
           </div>
           {/* NOVALS */}
           <div className="HeaderListItem">
             <Link to="/novels">
             <FontAwesomeIcon icon={faBook} />
-              <span>Novels</span>
+              <span>الروايات</span>
             </Link>
           </div>
           {/* CONTUCT US */}
           <div className="HeaderListItem">
             <FontAwesomeIcon icon={faMessage} />
-            <span>Contact us</span>
+            <span>اتصل بنا</span>
             {/*  */}
           </div>
         </div>

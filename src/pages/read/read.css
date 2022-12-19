@@ -68,7 +68,8 @@
 .textContenet {
   margin: 15px;
   display: flex;
-  text-align: left;
   width: 100%;
   max-width: 700px;
+  text-align: right;
+
 }

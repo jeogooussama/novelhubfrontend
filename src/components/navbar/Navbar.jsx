@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="navbar">
         <div className="navContainer">
           <span className="logo">
-            <a href="/">NovelHub</a>
+            <a href="/">NovelHub / روايات هوب</a>
           </span>
         </div>
       </div>

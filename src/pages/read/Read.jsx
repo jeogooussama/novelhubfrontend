@@ -4,10 +4,10 @@ import {
   faSun,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, } from "react";
+import { useEffect } from "react";
 import {} from "react-router-dom";
-import { useHistory } from 'react-router-use-history'
-import { useParams ,   } from "react-router-dom";
+import { useHistory } from "react-router-use-history";
+import { useParams } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import useFetchC from "../../hooks/useFeachC";
@@ -28,12 +28,10 @@ function Read() {
   /*
    
    */
-  const history = useHistory()
- const handlechange = (e) => {
-  history.push(`/novel/${novelId}/chapter/${e.target.value}`)
-}
-
-
+  const history = useHistory();
+  const handlechange = (e) => {
+    history.push(`/novel/${novelId}/chapter/${e.target.value}`);
+  };
 
   const setNext = () => {
     const Cid = chapter.map((id) => id._id);
@@ -50,8 +48,7 @@ function Read() {
       } catch (err) {}
     }
   };
-  useEffect(() => {
-  });
+  useEffect(() => {});
 
   const setBack = () => {
     const Cid = chapter.map((id) => id._id);
@@ -86,7 +83,7 @@ function Read() {
 
             <div className="navItme">
               <div className=".dropDownCh">
-                <select className="dropdownItem "onChange={handlechange}>
+                <select className="dropdownItem " onChange={handlechange}>
                   {singleChapter &&
                     chapter &&
                     chapter.map((chapter) => (
