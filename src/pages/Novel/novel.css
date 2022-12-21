@@ -1,14 +1,14 @@
 .novels {
   width: 100%;
   background-color: #120000;
-color: white;
+  color: white;
 }
 .novel {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-family: 'Marhey', cursive;
+  font-family: "Marhey", cursive;
   padding: 1px;
   text-align: right;
 }
@@ -19,7 +19,7 @@ color: white;
   max-width: 1024px;
   padding: 10px;
 
-  background-color: #D12E2E;
+  background-color: #d12e2e;
   border-top-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -30,7 +30,7 @@ color: white;
   max-width: 1024px;
   padding: 10px;
 }
-.chapterContainer>h3 {
+.chapterContainer > h3 {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -43,14 +43,11 @@ color: white;
   border-radius: 10px;
   margin: 10px;
 
-  font-family: 'Marhey', cursive;
-
+  font-family: "Marhey", cursive;
 }
 .NCItems {
-  font-family: 'Marhey', cursive;
+  font-family: "Marhey", cursive;
   gap: 20px;
-
-
 }
 .novelDesc {
   max-width: 1024px;
@@ -58,19 +55,22 @@ color: white;
   gap: 10px;
   color: white;
 }
-.NCItems>
+#story{
+  display: none;
+}
+
+.NCItems >
 .title,
 .translator,
 .rating,
 .story,
 .tags {
   color: white;
-
 }
-.image-airia{
+
+.image-airia {
   display: flex;
   height: min-content;
-
 }
 .tag-item {
   text-align: end;
@@ -90,12 +90,10 @@ color: white;
   width: 100%;
   height: 0px;
   padding: 10px;
-
 }
 .chapterContainer {
   width: 100%;
   color: white;
-
 }
 .chapterContainer > ul {
   list-style: none;
@@ -104,11 +102,9 @@ color: white;
   max-width: 1200px;
   margin: 10px;
   color: white;
-
 }
 .chapterContainer > ul > li {
   border-bottom: 0.5mm solid white;
-
 }
 
 @media only screen and (max-width: 600px) {

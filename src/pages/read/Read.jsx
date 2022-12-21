@@ -1,5 +1,3 @@
-
-import { useEffect } from "react";
 import {} from "react-router-dom";
 import { useHistory } from "react-router-use-history";
 import { useParams } from "react-router-dom";
@@ -42,7 +40,7 @@ function Read() {
       } catch (err) {}
     }
   };
-  useEffect(() => {});
+ 
 
   const setBack = () => {
     const Cid = chapter.map((id) => id._id);
@@ -60,72 +58,69 @@ function Read() {
       }
     }
   };
+
   //------------------------------------------------
   return (
     <div className="containerText">
-      <div>
-        <Navbar />
-        <div className="readerPage">
-          <div className="navbarChapters">
-            <div className="dropDownCh">
-              <select className="dropdownItem " onChange={handlechange}>
-                {singleChapter &&
-                  chapter &&
-                  chapter.map((chapter) => (
-                    <option
-                      value={chapter._id}
-                      key={chapter._id}
-                      defaultValue={singleChapter.map(
-                        (number) => number.numberChapter
-                      )}
-                    >
-                      {chapter.numberChapter}
-                    </option>
-                  ))}
-              </select>
+      <Navbar />
+      <div className="readerPage">
+        <div className="navbarChapters">
+          <div className="dropDownCh">
+            <select className="dropdownItem " onChange={handlechange}>
+              {singleChapter &&
+                chapter &&
+                chapter.map((chapter) => (
+                  <option
+                    value={chapter._id}
+                    key={chapter._id}
+                    defaultValue={singleChapter.map(
+                      (number) => number.numberChapter
+                    )}
+                  >
+                    {chapter.numberChapter}
+                  </option>
+                ))}
+            </select>
+          </div>
+          {singleChapter &&
+            singleChapter.map((chaptertitle, index) => (
+              <div className="titleNovel" key={index}>
+                {" "}
+                <h3>{chaptertitle.title}</h3>
+              </div>
+            ))}
+
+          <div className="navItme">
+            <div className="buttons">
+              <button className="leftB" onClick={setBack}>
+                سابق
+              </button>
             </div>
-            {singleChapter &&
-              singleChapter.map((chaptertitle, index) => (
-                <div className="titleNovel" key={index}>
-                  {" "}
-                  <h3>{chaptertitle.title}</h3>
-                </div>
-              ))}
 
-            <div className="navItme">
-              <div className="buttons">
-                <button className="leftB" onClick={setBack}>
-                  سابق
-                </button>
+            {singleChapter.map((number) => (
+              <div className="nuberChapter" key={number._id}>
+                {" "}
+                {number.numberChapter}
               </div>
+            ))}
 
-              {singleChapter.map((number) => (
-                <div className="nuberChapter" key={number._id}>
-                  {" "}
-                  {number.numberChapter}
-                </div>
-              ))}
-
-                <div className="buttons">
-                <button className="rightB" onClick={setNext}>
-                  التالي
-                </button>
-              </div>
+            <div className="buttons">
+              <button className="rightB" onClick={setNext}>
+                التالي
+              </button>
             </div>
           </div>
         </div>
-
-        {singleChapter &&
-          singleChapter.map((chapterText, index) => (
-            <div className="readAria" key={index}>
-              <pre className="textContenet">
-             
-                <p>{chapterText.textContianer}</p>
-             
-              </pre>
-            </div>
-          ))}
       </div>
+
+      {singleChapter &&
+        singleChapter.map((chapterText, index) => (
+          <div className="readAria" key={index}>
+            <pre className="textContenet">
+              <p>{chapterText.textContianer}</p>
+            </pre>
+          </div>
+        ))}
 
       <Footer />
     </div>

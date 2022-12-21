@@ -14,15 +14,25 @@ function Novel() {
     `https://novelhub.adaptable.app/chapter/${novelId}`
   );
   const tags = [data.tags].join(" ");
+  const show = () => {
+    var more = document.getElementById("more");
+    var story = document.getElementById("story");
+    more.innerHTML = "less";
+    story.style.display = "flex";
+  };
+  const hide = () => {
+    var story = document.getElementById("story");
+    var more = document.getElementById("more");
+    more.innerHTML = "more";
+    story.style.display = "none";
+  };
   return (
     <div className="novels">
       <Navbar />
       <Header />
       <div className="novel">
         <div className="novelContainer">
-          
           {
-            
             <div className="NCItems">
               <div className="novelDesc">
                 <div className="tags"></div>
@@ -36,7 +46,13 @@ function Novel() {
                 <div className="rating">التقييم:{data.rating}</div>
                 <div className="story">
                   {" "}
-                  القصة: <span>{data.desc}</span>{" "}
+                  القصة:
+                  <span id="story" onClick={hide}>
+                    {data.desc}{" "}
+                  </span>{" "}
+                  <span onClick={show} id="more">
+                    more
+                  </span>
                 </div>
                 <span className="tag-item"> {tags}</span>
               </div>
