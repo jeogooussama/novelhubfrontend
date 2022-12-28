@@ -9,11 +9,10 @@ import useFetchC from "../../hooks/useFeachC";
 
 function Novel() {
   const { novelId } = useParams();
-  const { data } = useFetchN(`https://novelhub.adaptable.app/novel/${novelId}`);
+  const {tags, data } = useFetchN(`https://novelhub.adaptable.app/novel/${novelId}`);
   const { chapter } = useFetchC(
     `https://novelhub.adaptable.app/chapter/${novelId}`
   );
-  const tags = [data.tags].join(" ");
   const show = () => {
     var more = document.getElementById("more");
     var story = document.getElementById("story");
@@ -35,7 +34,6 @@ function Novel() {
           {
             <div className="NCItems">
               <div className="novelDesc">
-                <div className="tags"></div>
                 <div className="title">
                   العنوان: <span>{data.title}</span>
                 </div>
@@ -54,7 +52,13 @@ function Novel() {
                     more
                   </span>
                 </div>
-                <span className="tag-item"> {tags}</span>
+                <div className="tags">
+                التصنيف: <span className="tag-item"> 
+                <span className="Stag">
+                {tags}
+                </span>
+                </span>
+                </div>
               </div>
             </div>
           }

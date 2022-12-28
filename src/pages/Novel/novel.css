@@ -66,15 +66,15 @@
 .story,
 .tags {
   color: white;
+  word-spacing: 3px;
+
 }
 
 .image-airia {
   display: flex;
   height: min-content;
 }
-.tag-item {
-  text-align: end;
-}
+
 .chapter {
   display: flex;
   margin-top: 0.1em;

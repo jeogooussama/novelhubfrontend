@@ -24,10 +24,10 @@ function Featurd() {
           <>
             <div className="FeaturdItems">
               <div className="Tags">
-                <span className="tag">{"Action"}</span>
+                <span className="tag">{"اكشن"}</span>
               </div>
               {data
-                .filter((data) => data.tags.includes("action"))
+                .filter((data) => data.tags.includes("أكشن"))
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
@@ -49,10 +49,10 @@ function Featurd() {
           <>
             <div className="FeaturdItems">
               <div className="Tags">
-                <span className="tag">{"Drama"}</span>
+                <span className="tag">{"دراما"}</span>
               </div>
               {data
-                .filter((data) => data.tags.includes("drama"))
+                .filter((data) => data.tags.includes("دراما"))
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
@@ -73,11 +73,11 @@ function Featurd() {
           <>
             <div className="FeaturdItems">
               <div className="Tags">
-                <span className="tag">{"Fantasy"}</span>
+                <span className="tag">{"فانتازي"}</span>
               </div>
               {data &&
                 data
-                  .filter((data) => data.tags.includes("fantasy"))
+                  .filter((data) => data.tags.includes("فانتازي"))
                   .map((data, index) => (
                     <div className="featrudBox" key={index}>
                       <StyledLink to={`/novel/${data._id}`}>
@@ -105,10 +105,10 @@ function Featurd() {
           <>
             <div className="FeaturdItems">
               <div className="Tags">
-                <span className="tag">{"Romantic"}</span>
+                <span className="tag">{"رومانسي"}</span>
               </div>
               {data
-                .filter((data) => data.tags.includes("romantic"))
+                .filter((data) => data.tags.includes("رومانسي"))
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
