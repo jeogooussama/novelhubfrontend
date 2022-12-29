@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 const useFetchSc = (url) => {
   const [singleChapter, setsinglechapter] = useState([]);
+  const [content,setContent]= useState("");
   const [loading, setLoding] = useState(false);
   const [error, setError] = useState(false);
   useEffect(() => {
@@ -11,6 +12,7 @@ const useFetchSc = (url) => {
       try {
         const res = await axios.get(url);
         setsinglechapter(res.data.chapter);
+        setContent(res.data.chapter[0].textContianer)
       } catch (err) {
         setError(err);
       }
@@ -29,6 +31,6 @@ const useFetchSc = (url) => {
     }
     setLoding(false);
   };
-  return {singleChapter,loading,error,reFetch}
+  return { singleChapter,content, loading, error, reFetch };
 };
-export default useFetchSc
+export default useFetchSc;

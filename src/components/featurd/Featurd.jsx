@@ -8,7 +8,6 @@ function Featurd() {
   const { data, loading } = useFetch(
     "https://novelhub.adaptable.app/novel?limit=5"
   );
-  console.log(data);
   const StyledLink = styled(Link)`
     color: white;
     text-decoration: none;

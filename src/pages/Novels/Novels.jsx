@@ -8,9 +8,7 @@ import "./novels.css";
 
 function Novels() {
   const { data, loading } = useFetch("https://novelhub.adaptable.app//novel");
-  useEffect(() => {
-    console.log(data);
-  },[data]);
+
   return (
     <div>
       <Navbar />

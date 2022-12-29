@@ -1,25 +1,23 @@
 import {} from "react-router-dom";
 import { useHistory } from "react-router-use-history";
 import { useParams } from "react-router-dom";
+import extractUrls from "extract-urls";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import useFetchC from "../../hooks/useFeachC";
 import useFetchSc from "../../hooks/useFeachSc";
-
 import "./read.css";
+
 function Read() {
   const { chapterId, novelId } = useParams();
   const { chapter } = useFetchC(
     `https://novelhub.adaptable.app/chapter/${novelId}` //All chapters in novel
   );
-  const { singleChapter } = useFetchSc(
+  const { singleChapter, content } = useFetchSc(
     `https://novelhub.adaptable.app/chapter/${novelId}/${chapterId}` //single chpater in novel
   );
   // done
   //-----------------------------------------------
-  /*
-   
-   */
   const history = useHistory();
   const handlechange = (e) => {
     history.push(`/novel/${novelId}/chapter/${e.target.value}`);
@@ -34,13 +32,11 @@ function Read() {
           return (document.getElementsByClassName("rightB")[0].style.display =
             "disable");
         if (Cid[i] === chapterId) {
-          console.log(Cid[i + 1]);
           window.location = `/novel/${novelId}/chapter/${Cid[i + 1]}`;
         }
       } catch (err) {}
     }
   };
- 
 
   const setBack = () => {
     const Cid = chapter.map((id) => id._id);
@@ -49,7 +45,6 @@ function Read() {
         if (i <= 0)
           document.getElementsByClassName("leftB").style.display = "disable";
         if (Cid[i] === chapterId) {
-          console.log(Cid[i - 1]);
           window.location = `/novel/${novelId}/chapter/${Cid[i - 1]}`;
         }
       } catch (err) {
@@ -58,6 +53,26 @@ function Read() {
       }
     }
   };
+  // img filter
+  function detectUrls(string) {
+    // Use a regular expression to find URLs in the string
+
+    let urls = extractUrls(string, true);
+    // If there are no URLs, return the original string
+    if (!urls) return string;
+
+    // Otherwise, replace each URL with an img tag
+    let newString = string;
+    urls.forEach((url) => {
+      newString = newString.replace(
+        url,
+        `<img width="150px" src="${url}" alt="URL image" />`
+      );
+    });
+    return newString;
+  }
+  const modifiedString = detectUrls(content);
+
 
   //------------------------------------------------
   return (
@@ -113,14 +128,11 @@ function Read() {
         </div>
       </div>
 
-      {singleChapter &&
-        singleChapter.map((chapterText, index) => (
-          <div className="readAria" key={index}>
-            <pre className="textContenet">
-              <p>{chapterText.textContianer}</p>
-            </pre>
-          </div>
-        ))}
+      <div className="readAria">
+        <pre className="textContenet">
+        <div className="view" dangerouslySetInnerHTML={{__html: modifiedString}} />
+        </pre>
+      </div>
 
       <Footer />
     </div>

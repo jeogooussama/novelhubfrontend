@@ -1,19 +1,19 @@
 .Header {
-  background-color: #FFC23C;
+  background-color: #ffc23c;
   display: flex;
   justify-content: center;
   position: relative;
   height: 80px;
-  font-family: 'Marhey', cursive;
+  font-family: "Marhey", cursive;
 }
 .HeaderItems {
   width: 100%;
   max-width: 1024px;
   display: flex;
   justify-content: space-between;
-  font-family: 'Marhey', cursive;
+  font-family: "Marhey", cursive;
 }
-a{
+a {
   text-decoration: none;
   color: white;
 }
@@ -36,6 +36,7 @@ a{
   position: relative;
   font-weight: 500;
   right: 7px;
+
 }
 .searchicon {
   position: absolute;
@@ -48,12 +49,23 @@ a{
   border-radius: 7px;
   height: 30px;
   width: 400px;
-}
 
+}
+.resultSearch {
+  display: flex;
+  align-content: center;
+  border: none;
+  background-color: white;
+  border-radius: 7px;
+  width: 400px;
+}
+.sreachTitle {
+  color: black;
+}
 /* resposive for phones */
 @media only screen and (max-width: 600px) {
   .Header {
-    height: max-content; 
+    height: max-content;
   }
   .HeaderItems {
     padding: 10px;
@@ -78,5 +90,4 @@ a{
     font-size: 24px;
     margin-bottom: 5px;
   }
-  
 }
