@@ -23,7 +23,7 @@ function Featurd() {
           <>
             <div className="FeaturdItems">
               <div className="Tags">
-                <span className="tag">{"اكشن"}</span>
+                <span className="tag">{"أكشن"}</span>
               </div>
               {data
                 .filter((data) => data.tags.includes("أكشن"))
@@ -32,7 +32,6 @@ function Featurd() {
                     <StyledLink to={`/novel/${data._id}`}>
                       <img src={data.image} alt="" srcSet="" className="nImg" />
                     </StyledLink>
-
                     <div className="FeaturdBoxInfo" key={data.id}>
                       <h3 className="title">{data.title} </h3>
                     </div>
@@ -89,7 +88,6 @@ function Featurd() {
                       </StyledLink>
                       <div className="FeaturdBoxInfo">
                         <h3 className="title">{data.title} </h3>
-                        
                       </div>
                     </div>
                   ))}

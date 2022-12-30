@@ -129,9 +129,10 @@ function Read() {
       </div>
 
       <div className="readAria">
-        <pre className="textContenet">
-        <div className="view" dangerouslySetInnerHTML={{__html: modifiedString}} />
-        </pre>
+     
+        <div className="textContenet" dangerouslySetInnerHTML={{__html: modifiedString}} />
+
+     
       </div>
 
       <Footer />

@@ -1,12 +1,12 @@
-.containerText{
+.containerText {
   background-color: black;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  box-sizing: content-box;
 }
 .readerPage {
   width: 100%;
   display: flex;
-  background-color: #FFC23C;
+  background-color: #ffc23c;
   font-family: "Marhey", cursive;
   align-items: center;
   justify-content: center;
@@ -70,22 +70,27 @@
   align-items: center;
 }
 .textContenet {
-  display: flex;
-  justify-content: center;
   color: white;
-  margin: 15px;
-  display: flex;
   width: 100%;
-  height: 800px;
+  height: auto;
   max-width: 800px;
-text-align: right;
+  padding: 10px;
+  white-space: pre-wrap;
+  text-align: right;
 }
-.view{
+.view {
   width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
-.containerText{
-  width: fit-content;
-}
+  .containerText {
+    width:auto;
+    max-width: 1024px;
+    padding: 0;
+    margin: 0;
+  }
+  .textContenet{
+    padding: 10px;
+    white-space: pre-wrap;
+  }
 }

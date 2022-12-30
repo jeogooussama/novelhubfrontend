@@ -2,14 +2,16 @@ import React from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Navbar from "../../components/navbar/Navbar";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./novel.css";
 import useFetchN from "../../hooks/useFetchN";
 import useFetchC from "../../hooks/useFeachC";
 
 function Novel() {
   const { novelId } = useParams();
-  const {tags, data } = useFetchN(`https://novelhub.adaptable.app/novel/${novelId}`);
+  const { tags, data } = useFetchN(
+    `https://novelhub.adaptable.app/novel/${novelId}`
+  );
   const { chapter } = useFetchC(
     `https://novelhub.adaptable.app/chapter/${novelId}`
   );
@@ -35,34 +37,30 @@ function Novel() {
             <div className="NCItems">
               <div className="novelDesc">
                 <div className="title">
-              <span>{data.title}</span>  :العنوان 
+                  <span>{data.title}</span>
                 </div>
                 <div className="author">
-               <span>{data.author}</span>   :الكاتب
+                  <span>{data.author}</span>
                 </div>
                 <div className="translator">
                   {" "}
-                <span>{data.translator}</span>{" "} :المترجم
+                  <span>{data.translator}</span>{" "}
                 </div>
-                
-                <div className="rating">التقييم:{data.rating}</div>
+
+                {/* <div className="rating">{data.rating}</div> */}
                 <div className="story">
                   {" "}
-              
                   <span id="story" onClick={hide}>
                     {data.desc}{" "}
                   </span>{" "}
-                  <span onClick={show} id="more">   
+                  <span onClick={show} id="more">
                     more
                   </span>
-                  :القصة
                 </div>
                 <div className="tags">
-                :التصنيف <span className="tag-item"> 
-                <span className="Stag">
-                {tags}
-                </span>
-                </span>
+                  <span className="tag-item">
+                    <span className="Stag">{tags}</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -81,11 +79,11 @@ function Novel() {
               <ul key={index}>
                 <li>
                   {" "}
-                  <a href={`/novel/${data._id}/chapter/${chapter._id}`}>
+                  <Link to={`/novel/${data._id}/chapter/${chapter._id}`}>
                     {" "}
                     {chapter.numberChapter}{" "}
-                  </a>{" "}
                   {chapter.title}
+                  </Link>{" "}
                 </li>
               </ul>
             ))}
