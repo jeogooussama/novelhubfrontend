@@ -35,25 +35,30 @@ function Novel() {
             <div className="NCItems">
               <div className="novelDesc">
                 <div className="title">
-                  العنوان: <span>{data.title}</span>
+              <span>{data.title}</span>  :العنوان 
+                </div>
+                <div className="author">
+               <span>{data.author}</span>   :الكاتب
                 </div>
                 <div className="translator">
                   {" "}
-                  المترجم:<span></span>{" "}
+                <span>{data.translator}</span>{" "} :المترجم
                 </div>
+                
                 <div className="rating">التقييم:{data.rating}</div>
                 <div className="story">
                   {" "}
-                  القصة:
+              
                   <span id="story" onClick={hide}>
                     {data.desc}{" "}
                   </span>{" "}
-                  <span onClick={show} id="more">
+                  <span onClick={show} id="more">   
                     more
                   </span>
+                  :القصة
                 </div>
                 <div className="tags">
-                التصنيف: <span className="tag-item"> 
+                :التصنيف <span className="tag-item"> 
                 <span className="Stag">
                 {tags}
                 </span>
