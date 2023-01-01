@@ -1,5 +1,5 @@
 .fuatrud {
-  font-family: 'Marhey', cursive;
+  font-family: "Marhey", cursive;
   color: white;
 }
 
@@ -31,14 +31,20 @@
   overflow: hidden;
   box-shadow: rgb(255, 255, 255) 0px 1px 3px, rgb(255, 255, 255) 0px 1px 2px;
 }
-.Tags {
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  height: min-content;
-}
 
+.Tags {
+  display: flex;
+  width: 60px;
+  font-weight: bold;
+  color: white;
+  text-align: rightx  ;
+}
+.tag{
+  position: absolute;
+  padding-left: 9px;
+  padding-top: 10px;
+
+}
 .featrudBox {
   padding: 10px;
   margin: 20px;
@@ -55,16 +61,6 @@
   border-radius: 10px;
 }
 
-.TagMor {
-  font-size: 20px;
-  cursor: pointer;
-  align-items: center;
-  display: flex;
-}
-.tag {
-  color: white;
-  
-}
 /* resposive for phones */
 @media only screen and (max-width: 600px) {
   .FeaturdItems {
