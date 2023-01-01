@@ -1,6 +1,19 @@
 {
-    "projects": {
-      "default": "novelhub-dde4f"
-    }
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "projects": {
+    "default": "novelhub-dde4f"
   }
-  
+}
