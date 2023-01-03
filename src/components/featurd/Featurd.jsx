@@ -21,10 +21,10 @@ function Featurd() {
           "loading"
         ) : (
           <>
+            <div className="Tags">
+              <span className="tag">{"أكشن"}</span>
+            </div>
             <div className="FeaturdItems">
-              <div className="Tags">
-                <span className="tag">{"أكشن"}</span>
-              </div>
               {data
                 .filter((data) => data.tags.includes("أكشن"))
                 .map((data, index) => (
@@ -45,10 +45,10 @@ function Featurd() {
           "loading"
         ) : (
           <>
+            <div className="Tags">
+              <span className="tag">{"دراما"}</span>
+            </div>
             <div className="FeaturdItems">
-              <div className="Tags">
-                <span className="tag">{"دراما"}</span>
-              </div>
               {data
                 .filter((data) => data.tags.includes("دراما"))
                 .map((data, index) => (
@@ -69,10 +69,10 @@ function Featurd() {
           "loading"
         ) : (
           <>
+            <div className="Tags">
+              <span className="tag">{"فانتازي"}</span>
+            </div>
             <div className="FeaturdItems">
-              <div className="Tags">
-                <span className="tag">{"فانتازي"}</span>
-              </div>
               {data &&
                 data
                   .filter((data) => data.tags.includes("فانتازي"))
@@ -100,10 +100,10 @@ function Featurd() {
           "loading"
         ) : (
           <>
+            <div className="Tags">
+              <span className="tag">{"رومانسي"}</span>
+            </div>
             <div className="FeaturdItems">
-              <div className="Tags">
-                <span className="tag">{"رومانسي"}</span>
-              </div>
               {data
                 .filter((data) => data.tags.includes("رومانسي"))
                 .map((data, index) => (
@@ -125,10 +125,10 @@ function Featurd() {
           "loading"
         ) : (
           <>
+            <div className="Tags">
+              <span className="tag">{"أكشن"}</span>
+            </div>
             <div className="FeaturdItems">
-              <div className="Tags">
-                <span className="tag">{"أكشن"}</span>
-              </div>
               {data
                 .filter((data) => data.tags.includes("أكشن"))
                 .map((data, index) => (
