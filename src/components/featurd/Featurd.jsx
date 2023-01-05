@@ -21,10 +21,11 @@ function Featurd() {
           "loading"
         ) : (
           <>
-            <div className="Tags">
+           <div className="Tags">
               <span className="tag">{"أكشن"}</span>
             </div>
             <div className="FeaturdItems">
+          
               {data
                 .filter((data) => data.tags.includes("أكشن"))
                 .map((data, index) => (

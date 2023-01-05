@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Navbar from "../../components/navbar/Navbar";
@@ -10,7 +10,7 @@ function Novels() {
   const { data, loading } = useFetch("https://novelhub.adaptable.app//novel");
 
   return (
-    <div>
+    <div className="all">
       <Navbar />
       <Header />
       <div className="novals">

@@ -15,6 +15,7 @@ function Novel() {
   const { chapter } = useFetchC(
     `https://novelhub.adaptable.app/chapter/${novelId}`
   );
+  console.log(chapter)
   const show = () => {
     var more = document.getElementById("more");
     var story = document.getElementById("story");

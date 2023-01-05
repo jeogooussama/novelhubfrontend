@@ -4,54 +4,49 @@
 }
 
 .feutredContainer {
-
   width: 100%;
   justify-content: center;
   display: flex;
   color: white;
   height: 1500px;
-
   /*   */
 }
 
 .FeatrudContainer {
   width: 100%;
   max-width: 1200px;
-text-align: right;
-  justify-content: center;
+  text-align: right;
   color: white;
-  
 }
 .FeaturdItems {
-  
+  width: 100%;
   text-align: right;
-  max-width: 1200px;
   margin-left: 3%;
   margin-top: 2%;
   text-align: center;
   color: white;
   display: flex;
   max-width: 1200px;
-  width: 100%;
   overflow: hidden;
   box-shadow: rgb(255, 255, 255) 0px 1px 3px, rgb(255, 255, 255) 0px 1px 2px;
-
 }
 
 .Tags {
-
-  text-align: right;
-  width: 100%;
+  display: flex;
+  height: auto;
   font-weight: bold;
   color: white;
-  text-align: right;
-  padding: 10px;
+  margin: 10px;
+padding: 0;
+
 }
-.tag{
+.tag {
+  width: 100%;
+  max-width: 1200px;
   position: absolute;
-  padding-left: 9px;
-  padding-top: 10px;
-  padding: 10px;
+margin:8.5px;
+padding: 0;
+background: #000000;
 
 }
 .featrudBox {
@@ -72,11 +67,19 @@ text-align: right;
 
 /* resposive for phones */
 @media only screen and (max-width: 600px) {
+.tag {
+  width: 0;
+  max-width: 1200px;
+  position: absolute;
+margin:8.5px;
+padding: 0;
+}
   .FeaturdItems {
     overflow: auto;
     margin: 0;
     padding: 10px;
     max-width: auto;
+    box-shadow: none;
   }
   .featrudBox {
     display: inline;
