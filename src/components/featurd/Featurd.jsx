@@ -131,7 +131,7 @@ function Featurd() {
             </div>
             <div className="FeaturdItems">
               {data
-                .filter((data) => data.tags.includes("أكشن"))
+                .filter((data) => data.tags.includes("مغامرة"))
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
