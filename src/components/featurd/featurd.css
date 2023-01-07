@@ -1,6 +1,7 @@
 .fuatrud {
   font-family: "Marhey", cursive;
   color: white;
+  font-size: 14px;
 }
 
 .feutredContainer {
@@ -56,6 +57,8 @@ background: #000000;
   box-shadow: rgb(255, 255, 255) 0px 1px 3px, rgb(255, 255, 255) 0px 1px 2px;
   background-color: #000000;
   color: white;
+  width: 160px;
+  height: 206px;
 }
 
 .nImg {
@@ -84,5 +87,6 @@ padding: 0;
   .featrudBox {
     display: inline;
     align-items: center;
+    font-size: 12px;
   }
 }

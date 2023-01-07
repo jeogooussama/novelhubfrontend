@@ -10,7 +10,10 @@ const useFetch = (url) => {
       setLoding(true);
       try {
         const res = await axios.get(url,{
-          sort:{data:-1}
+          sort:{data:-1},
+          params: {
+            _limit: 5
+           }
         });
         setData(res.data.Novals);
       } catch (err) {

@@ -6,7 +6,11 @@ import styled from "styled-components";
 
 function Featurd() {
   const { data, loading } = useFetch(
-    "https://novelhub.adaptable.app/novel?limit=5"
+    "https://novelhub.adaptable.app/novel/",{
+      params:{
+        _limit:5
+      }
+    }
   );
   const StyledLink = styled(Link)`
     color: white;
@@ -27,7 +31,7 @@ function Featurd() {
             <div className="FeaturdItems">
           
               {data
-                .filter((data) => data.tags.includes("أكشن"))
+                .filter((data) => data.tags.includes("أكشن")).slice(0,6)
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
@@ -51,7 +55,7 @@ function Featurd() {
             </div>
             <div className="FeaturdItems">
               {data
-                .filter((data) => data.tags.includes("دراما"))
+                .filter((data) => data.tags.includes("دراما")).slice(0,6)
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
@@ -76,7 +80,7 @@ function Featurd() {
             <div className="FeaturdItems">
               {data &&
                 data
-                  .filter((data) => data.tags.includes("فانتازي"))
+                  .filter((data) => data.tags.includes("فانتازي")).slice(0,6)
                   .map((data, index) => (
                     <div className="featrudBox" key={index}>
                       <StyledLink to={`/novel/${data._id}`}>
@@ -106,7 +110,7 @@ function Featurd() {
             </div>
             <div className="FeaturdItems">
               {data
-                .filter((data) => data.tags.includes("رومانسي"))
+                .filter((data) => data.tags.includes("رومانسي")).slice(0,6)
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
@@ -127,11 +131,11 @@ function Featurd() {
         ) : (
           <>
             <div className="Tags">
-              <span className="tag">{"أكشن"}</span>
+              <span className="tag">{"مغامرة"}</span>
             </div>
             <div className="FeaturdItems">
               {data
-                .filter((data) => data.tags.includes("مغامرة"))
+                .filter((data) => data.tags.includes("مغامرة")).slice(0,6)
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
