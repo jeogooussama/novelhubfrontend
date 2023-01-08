@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Featurd() {
-  const { data, loading } = useFetch(
-    "https://novelhub.adaptable.app/novel/",{
-      params:{
-        _limit:5
-      }
-    }
-  );
+  const { data, loading } = useFetch("https://novelhub.adaptable.app/novel/", {
+    params: {
+      _limit: 5,
+    },
+  });
   const StyledLink = styled(Link)`
     color: white;
     text-decoration: none;
@@ -25,13 +23,13 @@ function Featurd() {
           "loading"
         ) : (
           <>
-           <div className="Tags">
-              <span className="tag">{"أكشن"}</span>
+            <div className="Tags">
+              <span className="tag">{"Action"}</span>
             </div>
             <div className="FeaturdItems">
-          
               {data
-                .filter((data) => data.tags.includes("أكشن")).slice(0,6)
+                .filter((data) => data.tags.includes("Action"))
+                .slice(0, 6)
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
@@ -51,11 +49,12 @@ function Featurd() {
         ) : (
           <>
             <div className="Tags">
-              <span className="tag">{"دراما"}</span>
+              <span className="tag">{"Drama"}</span>
             </div>
             <div className="FeaturdItems">
               {data
-                .filter((data) => data.tags.includes("دراما")).slice(0,6)
+                .filter((data) => data.tags.includes("Drama"))
+                .slice(0, 6)
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
@@ -75,12 +74,13 @@ function Featurd() {
         ) : (
           <>
             <div className="Tags">
-              <span className="tag">{"فانتازي"}</span>
+              <span className="tag">{"Fantasy"}</span>
             </div>
             <div className="FeaturdItems">
               {data &&
                 data
-                  .filter((data) => data.tags.includes("فانتازي")).slice(0,6)
+                  .filter((data) => data.tags.includes("Fantasy"))
+                  .slice(0, 6)
                   .map((data, index) => (
                     <div className="featrudBox" key={index}>
                       <StyledLink to={`/novel/${data._id}`}>
@@ -106,11 +106,12 @@ function Featurd() {
         ) : (
           <>
             <div className="Tags">
-              <span className="tag">{"رومانسي"}</span>
+              <span className="tag">{"Romantic"}</span>
             </div>
             <div className="FeaturdItems">
               {data
-                .filter((data) => data.tags.includes("رومانسي")).slice(0,6)
+                .filter((data) => data.tags.includes("Romantic"))
+                .slice(0, 6)
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>
@@ -131,11 +132,12 @@ function Featurd() {
         ) : (
           <>
             <div className="Tags">
-              <span className="tag">{"مغامرة"}</span>
+              <span className="tag">{"Adventure"}</span>
             </div>
             <div className="FeaturdItems">
               {data
-                .filter((data) => data.tags.includes("مغامرة")).slice(0,6)
+                .filter((data) => data.tags.includes("Adventure"))
+                .slice(0, 6)
                 .map((data, index) => (
                   <div className="featrudBox" key={index}>
                     <StyledLink to={`/novel/${data._id}`}>

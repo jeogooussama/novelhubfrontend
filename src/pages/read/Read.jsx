@@ -73,7 +73,6 @@ function Read() {
   }
   const modifiedString = detectUrls(content);
 
-
   //------------------------------------------------
   return (
     <div className="containerText">
@@ -108,7 +107,7 @@ function Read() {
           <div className="navItme">
             <div className="buttons">
               <button className="leftB" onClick={setBack}>
-                سابق
+                Back
               </button>
             </div>
 
@@ -121,7 +120,7 @@ function Read() {
 
             <div className="buttons">
               <button className="rightB" onClick={setNext}>
-                التالي
+                Next
               </button>
             </div>
           </div>
@@ -129,10 +128,10 @@ function Read() {
       </div>
 
       <div className="readAria">
-     
-        <div className="textContenet" dangerouslySetInnerHTML={{__html: modifiedString}} />
-
-     
+        <div
+          className="textContenet"
+          dangerouslySetInnerHTML={{ __html: modifiedString }}
+        />
       </div>
 
       <Footer />

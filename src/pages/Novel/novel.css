@@ -10,11 +10,9 @@
   width: 100%;
   font-family: "Marhey", cursive;
   padding: 1px;
-  text-align: right;
 }
 .novelContainer {
   display: flex;
-  justify-content: flex-end;
   width: 100%;
   max-width: 1024px;
   padding: 10px;
@@ -33,7 +31,6 @@
 .chapterContainer > h3 {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 }
 .chapterContainer > ul > li > a {
   text-decoration: none;
@@ -55,19 +52,17 @@
   gap: 10px;
   color: white;
 }
-#story{
+#story {
   display: none;
 }
 
-.NCItems >
-.title,
+.NCItems > .title,
 .translator,
 .rating,
 .story,
 .tags {
   color: white;
   word-spacing: 3px;
-
 }
 
 .image-airia {
@@ -83,7 +78,6 @@
   align-content: center;
   justify-content: center;
   color: white;
-  text-align: right;
 }
 
 .chapter > h3 {

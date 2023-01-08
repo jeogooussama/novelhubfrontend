@@ -15,7 +15,7 @@ function Novel() {
   const { chapter } = useFetchC(
     `https://novelhub.adaptable.app/chapter/${novelId}`
   );
-  console.log(chapter)
+  console.log(chapter);
   const show = () => {
     var more = document.getElementById("more");
     var story = document.getElementById("story");
@@ -34,47 +34,45 @@ function Novel() {
       <Header />
       <div className="novel">
         <div className="novelContainer">
-          {
-            <div className="NCItems">
-              <div className="novelDesc">
-                <div className="title">
-                  <span>{data.title}</span>
-                </div>
-                <div className="author">
-                  <span>{data.author}</span>
-                </div>
-                <div className="translator">
-                  {" "}
-                  <span>{data.translator}</span>{" "}
-                </div>
-
-                {/* <div className="rating">{data.rating}</div> */}
-                <div className="story">
-                  {" "}
-                  <span id="story" onClick={hide}>
-                    {data.desc}{" "}
-                  </span>{" "}
-                  <span onClick={show} id="more">
-                    more
-                  </span>
-                </div>
-                <div className="tags">
-                  <span className="tag-item">
-                    <span className="Stag">{tags}</span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          }
           <div className="image-airia">
             {" "}
             <img srcSet={data.image} width="170px" alt="" className="NImg" />
+          </div>
+          <div className="NCItems">
+            <div className="novelDesc">
+              <div className="title">
+                <span>{data.title}</span>
+              </div>
+              <div className="author">
+                <span>{data.author}</span>
+              </div>
+              <div className="translator">
+                {" "}
+                <span>{data.translator}</span>{" "}
+              </div>
+
+              {/* <div className="rating">{data.rating}</div> */}
+              <div className="story">
+                {" "}
+                <span id="story" onClick={hide}>
+                  {data.desc}{" "}
+                </span>{" "}
+                <span onClick={show} id="more">
+                  more
+                </span>
+              </div>
+              <div className="tags">
+                <span className="tag-item">
+                  <span className="Stag">{tags}</span>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div className="chapter">
         <div className="chapterContainer">
-          <h3>الفصول</h3>
+          <h3>Chapters</h3>
           {chapter &&
             chapter.map((chapter, index) => (
               <ul key={index}>
@@ -82,8 +80,7 @@ function Novel() {
                   {" "}
                   <Link to={`/novel/${data._id}/chapter/${chapter._id}`}>
                     {" "}
-                    {chapter.numberChapter}{" "}
-                  {chapter.title}
+                    {chapter.numberChapter} {chapter.title}
                   </Link>{" "}
                 </li>
               </ul>

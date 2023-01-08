@@ -7,6 +7,7 @@ import Read from "./pages/read/Read";
 import Novels from "./pages/Novels/Novels";
 import Privacy from "./components/PrivacyPolicy/Privacy&Policy";
 import Terms from "./components/Terms/Terms";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/novel/:novelId/chapter/:chapterId" element={<Read />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        <Route path="/contact" element={<ContactUs/>}/>
       </Routes>
     </BrowserRouter>
   );

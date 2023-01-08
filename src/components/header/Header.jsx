@@ -34,20 +34,22 @@ const Header = () => {
           <div className="HeaderListItem">
             <Link to="/">
               <FontAwesomeIcon icon={faHouse} />
-              <span>الرئيسية</span>
+              <span>Home</span>
             </Link>
           </div>
           {/* NOVALS */}
           <div className="HeaderListItem">
             <Link to="/novels">
               <FontAwesomeIcon icon={faBook} />
-              <span>الروايات</span>
+              <span>Novels</span>
             </Link>
           </div>
           {/* CONTUCT US */}
           <div className="HeaderListItem">
-            <FontAwesomeIcon icon={faMessage} />
-            <span>اتصل بنا</span>
+            <Link to={"/contact"}>
+              <FontAwesomeIcon icon={faMessage} />
+              <span>Contact us</span>
+            </Link>
             {/*  */}
           </div>
         </div>
@@ -56,7 +58,7 @@ const Header = () => {
             <input
               type="text"
               className="searchBox"
-              placeholder="أدخل اسم الرواية"
+              placeholder="sreach by name"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
