@@ -1,5 +1,7 @@
 .all{
   background-color: black;
+  color: white;
+
 }
 .novals {
   padding-top: 1.3em;
@@ -25,6 +27,7 @@
   height: 250px;
   display: inline;
   float: left;
+  font-size: 12px;
   padding: 15px;
   border: 0.1mm solid white;
   border-radius: 7px;
