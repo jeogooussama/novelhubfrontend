@@ -58,7 +58,7 @@ const Header = () => {
             <input
               type="text"
               className="searchBox"
-              placeholder="sreach by name"
+              placeholder="Search by name"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
             />
@@ -66,13 +66,15 @@ const Header = () => {
           </div>
           {title
             ? searchResult.map((novel, index) => (
-                <div className="resultSearch" key={index}>
+              <div className="boxSearch"key={index}>
+                <div className="resultSearch" >
                   <div className="image">
                     <img width={"50px"} src={novel.image} alt="" />
                   </div>
                   <Link to={`/novel/${novel._id}`}>
                     <div className="sreachTitle">{novel.title}</div>
                   </Link>
+                </div>
                 </div>
               ))
             : null}

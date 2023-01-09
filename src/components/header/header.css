@@ -51,13 +51,20 @@ a {
   width: 400px;
 
 }
+.boxSearch{
+  position: relative;;
+  z-index:1;
+  width: 400px;
+
+  border: none;
+  border-radius: 7px;
+
+}
 .resultSearch {
   display: flex;
   align-content: center;
-  border: none;
-  background-color: white;
-  border-radius: 7px;
-  width: 400px;
+  background-color: white;  
+
 }
 .sreachTitle {
   color: black;
